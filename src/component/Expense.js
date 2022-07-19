@@ -159,7 +159,8 @@ export class Expense extends Component {
         arr.splice(key,1)
         console.log(arr)
         this.setState({
-            groceryArray:arr
+            groceryArray:arr,
+            balance:Number(this.state.balance)+ Number(val.price)
         })
         if(edit==='edit'){
             this.setState({
@@ -167,8 +168,7 @@ export class Expense extends Component {
                 money:val.price,
                 buttonText:'Update',
                 key:key,
-                selectedOption:'Grocery',
-                balance:Number(this.state.balance)+ Number(val.price)
+                selectedOption:'Grocery'
             })
         }
     }
@@ -178,7 +178,8 @@ export class Expense extends Component {
         arr.splice(key,1)
         console.log(arr)
         this.setState({
-            veggiesArray:arr
+            veggiesArray:arr,
+            balance:Number(this.state.balance)+ Number(val.price)
         })
         if(edit==='edit'){
             this.setState({
@@ -187,7 +188,6 @@ export class Expense extends Component {
                 buttonText:'Update',
                 key:key,
                 selectedOption:'Veggies',
-                balance:Number(this.state.balance)+ Number(val.price)
             })
         }
     }
@@ -197,7 +197,8 @@ export class Expense extends Component {
         arr.splice(key,1)
         console.log(arr)
         this.setState({
-            travellingArray:arr
+            travellingArray:arr,
+            balance:Number(this.state.balance)+ Number(val.price)
         })
         if(edit==='edit'){
             this.setState({
@@ -205,8 +206,7 @@ export class Expense extends Component {
                 money:val.price,
                 buttonText:'Update',
                 key:key,
-                selectedOption:'Travelling',
-                balance:Number(this.state.balance)+ Number(val.price)
+                selectedOption:'Travelling'
             })
         }
     }
@@ -216,7 +216,8 @@ export class Expense extends Component {
         arr.splice(key,1)
         console.log(arr)
         this.setState({
-            miscellaneousArray:arr
+            miscellaneousArray:arr,
+            balance:Number(this.state.balance)+ Number(val.price)
         })
         if(edit==='edit'){
             this.setState({
@@ -224,8 +225,7 @@ export class Expense extends Component {
                 money:val.price,
                 buttonText:'Update',
                 key:key,
-                selectedOption:'Miscellaneous',
-                balance:Number(this.state.balance)+ Number(val.price)
+                selectedOption:'Miscellaneous'
             })
         }
     }
