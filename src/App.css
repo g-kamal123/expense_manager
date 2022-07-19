@@ -1,38 +1,152 @@
-.App {
-  text-align: center;
+*,*::after,*::before{
+  box-sizing: border-box;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body{
+  margin: 0;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@media only screen and (max-width: 600px){
+  .expense{
+    /* width: 100vw; */
+    /* margin-left: 5rem;
+    flex-direction: column; */
+    width: 100%;
+    flex: 0 1 0;
+    
   }
+  
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.App{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.expense{
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  margin-top: 2%;
+  gap: 1rem;
+  /* flex-wrap: wrap; */
+  /* width: 100%; */
+  /* flex: 1 0 0; */
+  /* background-color: blue; */
+}
+.balance input{
+  font-size: 1.4rem;
+  padding: 1%;
+}
+.balance .inputBalance{
+  display: flex;
+  gap: 2rem;
+}
+.inputBalance button{
+  border: none;
+  background-color: whitesmoke;
+}
+.inputBalance button:hover{
+  background-color: blue;
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.button{
+  display: flex;
+  gap: 2rem;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.button p{
+  padding: 4%;
+  width: fit-content;
+  border-radius: 5px;
+  font-size: 1.8rem;
+}
+.inputselect{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.inputselect div{
+  display: flex;
+  gap: 2rem;
+}
+.inputselect input{
+  font-size: 1rem;
+  padding: 1%;
+  width: 50%;
+}
+.nameExp{
+  background-color: red;
+  width: fit-content;
+  font-size: 1.2rem;
+  padding: 2%;
+  border-radius: 5px;
+}
+ul{
+  list-style: none;
+  padding: 2%;
+  /* display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1 0 0; */
+}
+li{
+  margin-bottom: 5%;
+  display: flex;
+  justify-content: space-between;
+  padding: 4%;
+  align-items: center;
+  gap: 1rem;
+  flex: 1 0 0;
+}
+li .price{
+  width: inherit;
+}
+.print{
+  box-shadow: 0px 4px 8px rgb(0,0,0,0.5);
+  border-radius: 10px;
+}
+.editdel{
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+.edit:hover{
+  background-color: blue;
+  color: whitesmoke;
+}
+.del:hover{
+  width: 120%;
+  background-color: red;
+  color: white;
+}
+.editdel button{
+  background-color: whitesmoke;
+  border: none;
+  border-radius: 4px;
+  padding: 7%;
+  font-size: 1rem;
+}
+button{
+  cursor: pointer;
+}
+.option button{
+  padding: 2%;
+  font-size: 1.1rem;
+  border: none;
+  background-color: whitesmoke;
+}
+.option select{
+  background-color: whitesmoke;
+  border: none;
+  font-size: 1.1rem;
+}
+.option select:hover{
+  background-color: rgb(160, 160, 129);
+  color: white;
+  border: none;
+}
+.option button:hover{
+  background-color: blue;
+  color: whitesmoke;
+}
+li .name{
+  font-size: 1.7rem;
+  font-weight: 800;
+  /* color: red; */
 }
